@@ -37,7 +37,7 @@ public class ListExtend {
         return chCount;
     }
 
-    // Return a string with bthe first character of each element
+    // Return a string with the first character of each element
     public String firstLetter(){
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < size; i++){
@@ -64,10 +64,10 @@ public class ListExtend {
         }
     }
 
-    //Add a new item at a give position
+    //Add a new item at a given position
     // 0 1 2 3 [Array Index]
     // A M B _
-    // A A M B [Right Shifti]
+    // A A M B [Right Shift]
     // K A M B [Goal]
     public void insert(String s, int index){
         if(size >= data.length){

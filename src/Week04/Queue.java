@@ -38,6 +38,15 @@ public class Queue {
         }
     }
 
+    public String arrayState(){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < data.length; i++){
+            sb.append(data[i]).append(" ");
+        }
+        sb.append(" f: ").append(front).append(", b: ").append(back);
+        return sb.toString();
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder();
         for(int i = front; i != back; i = (i + 1) % data.length){

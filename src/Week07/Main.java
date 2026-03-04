@@ -21,11 +21,11 @@ public class Main {
         System.out.println("After method call");
         System.out.println(f3.getState());
         System.out.println("a: " + a);
-
     }
 
     public static void updateData(Foo f, int a){
         System.out.println("Inside update method");
+//        f = new Foo();
         f.setState("Updated state");
         a = 10;
         System.out.println(f.getState());

@@ -14,14 +14,21 @@ public class BubbleSort {
         print(data);
     }
 
-    // O (n^2)
+    // O (n^2), Enhanced Bubble Sort Best Case = O(n), Worst Case is still O(n^2)
+    // If T(n) = n^2 -> O(n^2), if T(n) = 1/2 * n^2 -> O(n^2)
     public static void bubbleSort(int[] data){
         for(int k = 0; k < data.length - 1; k++){
+            //Enhancing the Basic Algorithm
+            boolean isSwapped = false;
             for(int i = 0; i < data.length - k - 1; i++){
                 if(data[i] > data[i + 1]){ //Data is out of order
                     swap(data, i, i + 1);
                     print(data);
+                    isSwapped = true;
                 }
+            }
+            if(!isSwapped){
+                break;
             }
             System.out.println();
         }

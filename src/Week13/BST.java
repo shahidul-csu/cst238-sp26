@@ -7,6 +7,33 @@ public class BST {
         root = null;
     }
 
+    public void postOrder(){
+        if(isEmpty()){
+            System.out.println("Empty Tree");
+        } else{
+            root.postOrder();
+            System.out.println();
+        }
+    }
+
+    public void inOrder(){
+        if(isEmpty()){
+            System.out.println("Empty Tree");
+        } else{
+            root.inOrder();
+            System.out.println();
+        }
+    }
+
+    public void preOrder(){
+        if(isEmpty()){
+            System.out.println("Empty Tree");
+        } else{
+            root.preOrder();
+            System.out.println();
+        }
+    }
+
     public void add(int value){
         if(isEmpty()){
             root = new Node(value);
@@ -32,6 +59,36 @@ class Node{
         data = value;
         left = null;
         right = null;
+    }
+
+    public void postOrder(){
+        if(hasLeft()){
+            left.postOrder();
+        }
+        if(hasRight()){
+            right.postOrder();
+        }
+        System.out.print(data + " ");
+    }
+
+    public void inOrder(){
+        if(hasLeft()){
+            left.inOrder();
+        }
+        System.out.print(data + " ");
+        if(hasRight()){
+            right.inOrder();
+        }
+    }
+
+    public void preOrder(){
+        System.out.print(data + " ");
+        if(hasLeft()){
+            left.preOrder();
+        }
+        if(hasRight()){
+            right.preOrder();
+        }
     }
 
     public void add(int value){
